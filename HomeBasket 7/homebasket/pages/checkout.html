@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — HomeBasket</title>
+<meta name="description" content="Enter your delivery details and send your HomeBasket order to our team on WhatsApp.">
+<meta name="theme-color" content="#176B45">
+<link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body data-page="checkout" data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-head"><div class="container"><h1>Checkout</h1><p>Enter your delivery details. We confirm availability and prices before your order is accepted.</p></div></section>
+<section class="section"><div class="container">
+<div id="checkout-root">
+  <div class="checkout-layout">
+    <form id="checkout-form" class="form-card" novalidate>
+      <h2>Delivery details</h2>
+      <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" aria-describedby="err-name"><p class="field-error" id="err-name" role="alert"></p></div>
+      <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0803 123 4567 or +234 803 123 4567" aria-describedby="err-phone"><p class="field-error" id="err-phone" role="alert"></p></div>
+      <div class="field"><label for="zone">Delivery area</label><select id="zone" name="zone" aria-describedby="err-zone"><option value="">Loading areas…</option></select><p class="field-error" id="err-zone" role="alert"></p></div>
+      <div class="field"><label for="address">Delivery address</label><textarea id="address" name="address" rows="3" placeholder="House number, street, nearest landmark" aria-describedby="err-address"></textarea><p class="field-error" id="err-address" role="alert"></p></div>
+      <div class="field"><label for="instructions">Delivery instructions <span class="optional">(optional)</span></label><textarea id="instructions" name="instructions" rows="2" placeholder="e.g. Call on arrival"></textarea></div>
+      <fieldset class="field"><legend>Delivery option</legend>
+        <label class="check-row"><input type="radio" name="option" value="standard" checked> Standard delivery</label>
+        <label class="check-row"><input type="radio" name="option" value="scheduled"> Scheduled delivery (choose a date)</label></fieldset>
+      <div class="field" id="date-field" hidden><label for="date">Preferred delivery date</label><input id="date" name="date" type="date" aria-describedby="err-date"><p class="field-error" id="err-date" role="alert"></p></div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block" id="place-order">Place order request</button>
+      <p class="note">After you place your request, send it to our team on WhatsApp. We confirm availability and prices before accepting your order. Payment details are shared when your order is confirmed.</p>
+    </form>
+    <aside class="summary-card" aria-label="Order summary">
+      <h2>Order summary</h2>
+      <ul class="summary-items" id="summary-items"></ul>
+      <dl class="summary-rows">
+        <div><dt>Subtotal</dt><dd id="sum-sub"></dd></div>
+        <div><dt>Delivery fee</dt><dd id="sum-fee"></dd></div>
+        <div class="total"><dt>Estimated total</dt><dd id="sum-total"></dd></div>
+      </dl>
+      <p class="note">Estimated until our team confirms availability and prices.</p>
+      <a class="link-btn" href="cart.html">Edit basket</a>
+    </aside>
+  </div>
+</div>
+<div id="order-done" class="success-card" hidden>
+  <div class="success-icon" aria-hidden="true">🧺</div>
+  <h2 id="order-done-heading" tabindex="-1">Your order request is ready</h2>
+  <p class="lead">Your reference is <strong id="done-ref"></strong>. <strong>Now send it to our team on WhatsApp</strong>: your message is prepared, you only need to press Send.</p>
+  <ul class="summary-items done-items" id="done-summary"></ul>
+  <p>Estimated total: <strong id="done-total"></strong></p>
+  <div class="btn-row center"><button type="button" class="btn btn-whatsapp btn-lg" id="done-wa">Send order on WhatsApp</button><a class="btn btn-outline" id="track-link" href="track-order.html">Track this order</a><a class="btn btn-ghost" href="shop.html">Continue shopping</a></div>
+  <ul class="check-list"><li>We confirm availability and final prices before accepting your order.</li><li>If anything changes you approve it first.</li><li>Payment details are shared when your order is confirmed.</li></ul>
+</div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/data-access.js"></script>
+<script src="../assets/js/products.js"></script>
+<script src="../assets/js/business-data.js"></script>
+<script src="../assets/js/store.js"></script>
+<script src="../assets/js/notifications.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/cart.js"></script>
+<script src="../assets/js/checkout.js"></script>
+</body>
+</html>

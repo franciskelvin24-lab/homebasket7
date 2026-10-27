@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in — HomeBasket</title>
+<meta name="description" content="Sign in to your HomeBasket account.">
+<meta name="theme-color" content="#176B45">
+<link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body data-page="account" data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-head"><div class="container"><h1>Sign in</h1><p>You can shop, restock and track orders without an account.</p></div></section>
+<section class="section"><div class="container narrow">
+<div class="alert alert-warn" role="note"><strong>Demonstration accounts.</strong> Sign-in on this site is simulated in your browser and is <strong>not secure authentication</strong>. Your password is not stored or checked, and nothing is sent to a server. Please do not use a password you use anywhere else. Real accounts need a backend.</div>
+<form id="login-form" class="form-card" novalidate>
+  <p class="field-error" id="form-error" role="alert"></p>
+  <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" aria-describedby="err-email"><p class="field-error" id="err-email" role="alert"></p></div>
+  <div class="field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" aria-describedby="err-password"><p class="field-error" id="err-password" role="alert"></p></div>
+  <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+  <p class="form-links"><a href="forgot-password.html">Forgot your password?</a> · <a href="create-account.html">Create an account</a></p>
+</form>
+<p class="center"><a class="btn btn-outline" href="shop.html">Continue shopping as a guest</a></p>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/data-access.js"></script>
+<script src="../assets/js/products.js"></script>
+<script src="../assets/js/business-data.js"></script>
+<script src="../assets/js/store.js"></script>
+<script src="../assets/js/notifications.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/cart.js"></script>
+<script src="../assets/js/order-updates.js"></script>
+<script src="../assets/js/account.js"></script>
+</body>
+</html>

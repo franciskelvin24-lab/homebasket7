@@ -1,0 +1,50 @@
+/* ==========================================================================
+   HomeBasket — internal pages (admin, supplier area, delivery partner area)
+   ========================================================================== */
+body[data-layout="dashboard"] { background: #F3F5F2; }
+.internal-banner { background: #2B3A31; color: #E8F0EA; font-size: .82rem; text-align: center; padding: .45rem 1rem; }
+.dash-top { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+.dash-top-inner { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; padding-top: .6rem; padding-bottom: .6rem; }
+.role-tag { background: var(--green-soft); color: var(--green-dark); border-radius: 999px; padding: .15rem .7rem; font-size: .8rem; font-weight: 700; }
+.dash-links { display: flex; gap: .25rem; flex-wrap: wrap; margin-left: auto; }
+.dash-links a { text-decoration: none; color: var(--text); padding: .4rem .8rem; border-radius: 999px; font-size: .9rem; font-weight: 500; }
+.dash-links a:hover { background: var(--green-soft); }
+.dash-links a[aria-current="page"] { background: var(--green); color: #fff; }
+.dash-layout { display: block; }
+.dash-nav { display: flex; gap: .4rem; overflow-x: auto; padding: .75rem 1rem; background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 57px; z-index: 90; scrollbar-width: thin; }
+.dash-nav a { flex: none; text-decoration: none; color: var(--text); padding: .5rem .9rem; border-radius: 10px; font-weight: 500; font-size: .93rem; }
+.dash-nav a:hover { background: var(--green-soft); }
+.dash-nav a[aria-current="page"] { background: var(--green); color: #fff; }
+.dash-main, .dash-solo { padding: 1.25rem 1rem 3rem; max-width: 1240px; margin: 0 auto; }
+.dash-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.dash-head h1 { font-size: 1.6rem; margin: 0; }
+.dash-head p { margin: 0; }
+.stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; margin-bottom: 1.25rem; }
+.stat-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
+.stat-label { margin: 0; font-size: .82rem; color: var(--muted); font-weight: 600; }
+.stat-value { margin: .2rem 0; font-size: 1.6rem; font-weight: 800; color: var(--green-dark); line-height: 1.2; }
+.stat-note { margin: 0; font-size: .78rem; color: var(--muted); }
+.status-grid { display: grid; gap: 1rem; }
+.status-grid .form-card, .report-grid .form-card { margin-bottom: 0; }
+.filters { display: grid; gap: .75rem; grid-template-columns: 1fr; margin-bottom: .5rem; }
+.filters .field { margin-bottom: 0; }
+.report-grid { display: grid; gap: 1rem; margin-bottom: 1rem; }
+.bars { list-style: none; display: grid; gap: .5rem; }
+.bars li { display: grid; grid-template-columns: 110px 1fr auto; gap: .6rem; align-items: center; font-size: .86rem; }
+.bar { background: #E8EEE9; border-radius: 999px; height: 12px; overflow: hidden; display: block; }
+.bar span { display: block; height: 100%; background: var(--green); border-radius: 999px; }
+.bar-val { font-weight: 700; min-width: 2.5rem; text-align: right; }
+.req-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem; background: var(--white); }
+.req-card h3 { margin-bottom: .4rem; }
+.preview-as { max-width: 420px; }
+@media (min-width: 900px) {
+  .dash-layout { display: grid; grid-template-columns: 220px 1fr; align-items: start; }
+  .dash-nav { flex-direction: column; overflow: visible; position: sticky; top: 64px; height: calc(100vh - 64px); border-right: 1px solid var(--border); border-bottom: 0; padding: 1rem .75rem; }
+  .dash-main { padding: 1.75rem 2rem 3rem; width: 100%; }
+  .stat-grid { grid-template-columns: repeat(5, 1fr); }
+  .status-grid { grid-template-columns: repeat(3, 1fr); }
+  .filters { grid-template-columns: repeat(3, 1fr); }
+  .report-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.dash-single { padding-top: 1.25rem; padding-bottom: 3rem; max-width: 980px; }
